@@ -21,15 +21,16 @@
     }
     .section { padding: 2rem; max-width: 1000px; margin: auto; }
     .gallery-top { display: flex; flex-wrap: wrap; justify-content: center; padding: 1rem; background: white; }
-    .gallery-top img { width: 100%; max-width: 300px; margin: 0.5rem; border-radius: 10px; }
+    $1
+  transition: transform 0.3s ease;}
     .room { background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); cursor: pointer; transition: background 0.2s; }
     .room:hover { background: #e3f2f1; }
     .room-details { display: none; padding-top: 1rem; }
     .room-gallery { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
     .room-gallery img {
   width: 100%;
-  max-width: 300px;
-  height: 200px;
+  max-width: 200px;
+  height: 140px;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -53,7 +54,10 @@
       text-decoration: none;
       border-radius: 5px;
     }
-  </style>
+  .gallery-top img:hover {
+  transform: scale(1.05);
+}
+$1
   <script>
     function toggleRoomDetails(id) {
       const element = document.getElementById(id);
