@@ -90,11 +90,11 @@
       margin-bottom: 0.5rem;
     }
     .room-gallery img {
-  width: 225px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 6px;
-}
+      width: 225px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
     .facilities, .location, .contact {
       background: #fff;
       padding: 1.5rem;
@@ -131,12 +131,18 @@
     max-width: 100%; /* en móviles no limitar el ancho */
   }
   .room-gallery {
-    justify-content: center;
+    display: block;          /* switch from flex to block */
+    overflow-x: auto;        /* enable horizontal scroll */
+    white-space: nowrap;     /* keep images in one horizontal line */
+    padding-bottom: 0.5rem;  /* space below scrollbar */
   }
   .room-gallery img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
+    display: inline-block;   /* inline so nowrap works */
+    width: 150px;            /* fixed width for images */
+    height: 100px;           /* fixed height to keep ratio */
+    object-fit: cover;       /* nicely crop images */
+    margin-right: 0.5rem;    /* spacing between images */
+    border-radius: 6px;
   }
   .scroll-gallery-container img {
     height: 120px;
