@@ -20,6 +20,13 @@
       text-align: center;
       position: relative;
     }
+    .hero-img {
+      width: 100%;          /* que ocupe todo el ancho del contenedor en móvil */
+      max-width: 600px;     /* pero no más de 600px en escritorio */
+      height: auto;         /* mantiene proporción */
+      display: block;       /* para que margin auto funcione */
+      margin: 0 auto;       /* centra la imagen */
+    }
     .header-subtitle {
       margin-top: 1rem;
       font-size: 1.2rem;
@@ -120,6 +127,9 @@
       border-radius: 5px;
     }
   @media (max-width: 600px) {
+  .hero-img {
+    max-width: 100%; /* en móviles no limitar el ancho */
+  }
   .room-gallery {
     justify-content: center;
   }
