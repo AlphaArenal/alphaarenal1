@@ -119,7 +119,26 @@
       text-decoration: none;
       border-radius: 5px;
     }
-  </style>
+  @media (max-width: 600px) {
+  .room-gallery {
+    justify-content: center;
+  }
+  .room-gallery img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+  .scroll-gallery-container img {
+    height: 120px;
+  }
+  .section {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+</style>
   <script>
     function toggleRoomDetails(id) {
       const element = document.getElementById(id);
