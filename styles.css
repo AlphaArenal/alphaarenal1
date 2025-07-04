@@ -1,1 +1,13 @@
 
+#container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#thumbnails{
+  padding-top: 20px;
+}
+
+#thumbnails img{
+  #border: 5px solid #5E8CF8;
+}
