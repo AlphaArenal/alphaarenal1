@@ -54,37 +54,133 @@
     }
     /* Your existing styles remain unchanged (I left them out here to keep it short) */
     /* Keep your existing CSS here */
-
     .scroll-gallery-container {
       overflow-x: auto;
       white-space: nowrap;
       padding: 1rem;
       background: #fff;
     }
-
     .scroll-gallery-container img {
       height: 200px;
       margin-right: 1rem;
       border-radius: 10px;
       display: inline-block;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
     }
-
     .scroll-gallery-container img:hover {
       transform: scale(1.05);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
-  </style>
+    .section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gallery-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;
+      background: white;
+    }
+    .gallery-top img {
+      width: 100%;
+      max-width: 300px;
+      margin: 0.5rem;
+      border-radius: 10px;
+    }
+    .room {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .room:hover {
+      background: #e3f2f1;
+    }
+    .room-details {
+      display: none;
+      padding-top: 1rem;
+    }
+    .room-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .room-gallery img {
+      width: 225px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .facilities, .location, .contact {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .map {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .reserve-btn {
+      display: inline-block;
+      background-color: #00796b;
+      color: white;
+      padding: 0.6rem 1rem;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  @media (max-width: 600px) {
+  .hero-img {
+    max-width: 100%; /* en móviles no limitar el ancho */
+  }
+  .room-gallery {
+    display: block;          /* switch from flex to block */
+    overflow-x: auto;        /* enable horizontal scroll */
+    white-space: nowrap;     /* keep images in one horizontal line */
+    padding-bottom: 0.5rem;  /* space below scrollbar */
+  }
+  .room-gallery img {
+    display: inline-block;   /* inline so nowrap works */
+    width: 150px;            /* fixed width for images */
+    height: 100px;           /* fixed height to keep ratio */
+    object-fit: cover;       /* nicely crop images */
+    margin-right: 0.5rem;    /* spacing between images */
+    border-radius: 6px;
+  }
+  .scroll-gallery-container img {
+    height: 120px;
+  }
+  .section {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+</style>
 
   <script>
     if (location.hostname === 'www.alphaarenal.com') {
       window.location.href = 'https://alphaarenal.com' + location.pathname + location.search + location.hash;
-    }
-
-    function toggleDetails(id) {
-      const element = document.getElementById(id);
-      element.style.display = (element.style.display === 'block') ? 'none' : 'block';
     }
   </script>
 </head>
