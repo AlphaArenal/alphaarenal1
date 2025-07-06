@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    function toggleDetails(id) {
+      const element = document.getElementById(id);
+      element.style.display = (element.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alpha Arenal Hostel</title>
@@ -120,6 +126,162 @@
   </div>
 
   <!-- Optional: Rest of your content goes here (rooms, tours, contact, etc.) -->
+  <section class="section">
+    <h2>Rooms</h2>
+    <div class="room" onclick="toggleDetails('r100')">
+      <h3>Bed in 8-bed shared dorm, $10</h3>
+      <div id="r100" class="room-details">
+        <div class="room-gallery">
+          <img src="images/room100.jpg" alt="">
+        </div>
+        <p>8-person shared dorm, $10, bathroom outside</p>
+        <a class="reserve-btn" href="https://tally.so/r/w7gyJ6" target="_blank">Reserve this room</a>
+      </div>
+    </div>
+
+    <div class="room" onclick="toggleDetails('r101')">
+      <h3>Bed in 4-bed female dorm ensuite, $14</h3>
+      <div id="r101" class="room-details">
+        <div class="room-gallery">
+          <img src="images/room102.jpg" alt="">
+        </div>
+        <p>4-person female dorm, $14, bathroom inside</p>
+        <a class="reserve-btn" href="https://tally.so/r/w7gyJ6" target="_blank">Reserve this room</a>
+      </div>
+    </div>
+
+    <div class="room" onclick="toggleDetails('r102')">
+      <h3>Bed in 6-bed mixed dorm ensuite, $12</h3>
+      <div id="r102" class="room-details">
+        <div class="room-gallery">
+          <img src="images/room102.jpg" alt="">
+        </div>
+        <p>6-person mixed dorm, $12, bathroom inside</p>
+        <a class="reserve-btn" href="https://tally.so/r/w7gyJ6" target="_blank">Reserve this room</a>
+      </div>
+    </div>
+
+    <div class="room" onclick="toggleDetails('r103')">
+      <h3>Bed in 4-bed mixed dorm ensuite, $12</h3>
+      <div id="r103" class="room-details">
+        <div class="room-gallery">
+          <img src="images/room102.jpg" alt="">
+        </div>
+        <p>4-person mixed dorm, $12, bathroom inside</p>
+        <a class="reserve-btn" href="https://tally.so/r/w7gyJ6" target="_blank">Reserve this room</a>
+      </div>
+    </div>
+
+    <div class="room" onclick="toggleDetails('priv4')">
+      <h3>Private room for 4 pax, $????????</h3>
+      <div id="priv4" class="room-details">
+        <div class="room-gallery">
+          <img src="images/rooms/106.jpg" alt="">
+        </div>
+        <p>Private room for 4 people, $???????, private bathroom. 1 double bed and 1 bunk bed.</p>
+        <a class="reserve-btn" href="https://tally.so/r/w7gyJ6" target="_blank">Reserve this room</a>
+      </div>
+    </div>
+
+    <div class="room" onclick="toggleDetails('priv3')">
+      <h3>Private room for 3 pax, $50</h3>
+      <div id="priv3" class="room-details">
+        <div class="room-gallery">
+          <img src="images/rooms/107.jpg" alt="">
+        </div>
+        <p>Private room for 3 people, $50, private bathroom. 1 double bed and 1 single bed.</p>
+        <a class="reserve-btn" href="https://tally.so/r/w7gyJ6" target="_blank">Reserve this room</a>
+      </div>
+    </div>
+
+    <div class="room" onclick="toggleDetails('priv2')">
+      <h3>Private room for 2 pax, $40</h3>
+      <div id="priv2" class="room-details">
+        <div class="room-gallery">
+          <img src="images/room105.jpg" alt="">
+          <img src="images/room108.jpg" alt="">
+          <img src="images/room109.jpg" alt="">
+        </div>
+        <p>Private room for 2 people, $40, private bathroom. 1 double bed.</p>
+        <a class="reserve-btn" href="https://tally.so/r/w7gyJ6" target="_blank">Reserve this room</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section facilities">
+    <h2>Facilities & Services</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; font-size: 1rem;">
+      <div><strong>Free Amenities</strong><br>Parking, WiFi, Lockers, Luggage Storage</div>
+      <div><strong>Services</strong><br>Tour Desk, Housekeeping, Limited Reception Hours</div>
+      <div><strong>Entertainment</strong><br>Common Room, Board Games, Book Exchange</div>
+      <div><strong>Kitchen</strong><br>Fridge, Stove, Microwave, Utensils, Coffee & Tea</div>
+      <div><strong>Wellness</strong><br>Hot Showers, Garden, Outdoor Terrace</div>
+      <div><strong>Safety</strong><br>Security Lockers, 24-Hour Security, Fire Extinguishers</div>
+    </div>
+  </section>
+
+  <section class="section location">
+    <h2>Location</h2>
+    <iframe class="map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCrNSn7TRM-SdvddopDL-JyUOodMiC_Ud4&q=Alpha+Arenal+Hostel,La+Fortuna+Costa+Rica" allowfullscreen></iframe>
+  </section>
+
+  <section class="section contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to book? Chat with us!</p>
+    <a class="whatsapp-btn" href="https://wa.me/50687705858" target="_blank">Message us on WhatsApp</a>
+  </section>
+  
+  <section class="section tours">
+    <h2>Tours</h2>
+    
+    <div class="room" onclick="toggleDetails('volcano')">
+      <h3>Arenal Volano and hot springs</h3>
+      <div id="volcano" class="room-details">
+        <div class="room-gallery">
+          <img src="images/volcano.jpg" alt="">
+          <img src="images/volcanogroup.jpg" alt="">
+          <img src="images/volcanoworkaway.jpg" alt="">
+        </div>
+        <p>self-guided tour of Mirador el Silencio nature reserve and El Choyin hot springs, with transportation included. $28 pp</p>
+      </div>
+    </div>
+      <div class="room" onclick="toggleDetails('bridge')">  
+        <h3>Mistico hanging bridges</h3>
+        <div id="bridge" class="room-details">
+          <div class="room-gallery">
+            <img src="images/volcano.jpg" alt="">
+         </div>
+         <p>self-guided tour of Mistico Park Hanging Bridges, with transportation included. $55 pp</p>
+     </div>
+   </div>
+     <div class="room" onclick="toggleDetails('night')">
+        <h3>Night Walk</h3>
+        <div id="night" class="room-details">
+          <div class="room-gallery">
+            <img src="images/volcano.jpg" alt="">
+          </div>
+          <p>guided night walk of XXXXXXXXXXX, with transportation included. $39 pp</p>
+     </div>
+  </div>
+     <div class="room" onclick="toggleDetails('waterfall')">
+        <h3>La Fortuna Waterfall</h3>
+        <div id="waterfall" class="room-details">
+          <div class="room-gallery">
+            <img src="images/volcano.jpg" alt="">
+          </div>
+          <p>Entrance and transportation to the La Fortuna waterfall and nature reserve. $28 pp</p>
+      </div>   
+    </div>
+      <div class="room" onclick="toggleDetails('RioCeleste')">
+        <h3>Rio Celeste</h3>
+        <div id="RioCeleste" class="room-details">
+          <div class="room-gallery">
+            <img src="images/volcano.jpg" alt="">
+          </div>
+          <p>A trip to Tenorio national park and the turquoise Rio Celeste river. Weather permitting! $59 pp </p>
+        </div>
+      </div>
+  </div>
 
   <!-- Lightbox2 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
