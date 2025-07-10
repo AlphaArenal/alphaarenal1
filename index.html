@@ -13,15 +13,37 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
-    
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="rooms.html">Rooms</a></li>
-      <li><a href="tours.html">Tours</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    .navbar {
+  background-color: #00796b;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #004d40;
+  border-radius: 4px;
+}
 
     body {
       font-family: 'Roboto', sans-serif;
