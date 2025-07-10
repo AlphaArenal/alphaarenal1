@@ -3,3 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    .navbar {
+  background-color: #00796b;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #004d40;
+  border-radius: 4px;
+}
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      color: #333;
+    }
+    header {
+      background: #00796b;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+    .hero-img {
+      width: 100%;          /* que ocupe todo el ancho del contenedor en móvil */
+      max-width: 600px;     /* pero no más de 600px en escritorio */
+      height: auto;         /* mantiene proporción */
+      display: block;       /* para que margin auto funcione */
+      margin: 0 auto;       /* centra la imagen */
+    }
+    .header-subtitle {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+    .scroll-gallery-container {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 1rem;
+      background: #fff;
+    }
+    .scroll-gallery-container img {
+      height: 200px;
+      margin-right: 1rem;
+      border-radius: 10px;
+      display: inline-block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .scroll-gallery-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gallery-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;
+      background: white;
+    }
+    .gallery-top img {
+      width: 100%;
+      max-width: 300px;
+      margin: 0.5rem;
+      border-radius: 10px;
+    }
+    .room {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .room:hover {
+      background: #e3f2f1;
+    }
+    .room-details {
+      display: none;
+      padding-top: 1rem;
+    }
+    .room-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .room-gallery img {
+      width: 225px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .facilities, .location, .contact {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .map {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .reserve-btn {
+      display: inline-block;
+      background-color: #00796b;
+      color: white;
+      padding: 0.6rem 1rem;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  @media (max-width: 600px) {
+  .hero-img {
+    max-width: 100%; /* en móviles no limitar el ancho */
+  }
+  .room-gallery {
+    display: block;          /* switch from flex to block */
+    overflow-x: auto;        /* enable horizontal scroll */
+    white-space: nowrap;     /* keep images in one horizontal line */
+    padding-bottom: 0.5rem;  /* space below scrollbar */
+  }
+  .room-gallery img {
+    display: inline-block;   /* inline so nowrap works */
+    width: 150px;            /* fixed width for images */
+    height: 100px;           /* fixed height to keep ratio */
+    object-fit: cover;       /* nicely crop images */
+    margin-right: 0.5rem;    /* spacing between images */
+    border-radius: 6px;
+  }
+  .scroll-gallery-container img {
+    height: 120px;
+  }
+  .section {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+</style>
+  <script>
+    function toggleDetails(id) {
+      const element = document.getElementById(id);
+      element.style.display = (element.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="rooms.html">Rooms</a></li>
+    <li><a href="tours.html">Tours</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
