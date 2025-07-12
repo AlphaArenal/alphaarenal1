@@ -27,6 +27,53 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.nav-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .menu-toggle {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #00695c;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .nav-links li {
+      text-align: center;
+    }
+  }
 
 .navbar li {
   margin: 0 1rem;
@@ -200,18 +247,27 @@
       element.style.display = (element.style.display === 'block') ? 'none' : 'block';
     }
   </script>
+  <script>
+  document.getElementById('mobile-menu').onclick = function () {
+    document.getElementById('nav-links').classList.toggle('active');
+  };
+</script>
 </head>
 <body>
   <header>
     <nav class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="rooms.html">Rooms</a></li>
-    <li><a href="tours.html">Tours</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+      <div class="nav-container">
+        <div class="logo">Alpha Arenal</div>
+        <div class="menu-toggle" id="mobile-menu">☰</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+  </nav>
 
     <h1>Alpha Arenal Hostel</h1>
     <div class="header-subtitle">Feel at Home with Nature and People</div>
